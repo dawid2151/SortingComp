@@ -1,0 +1,4 @@
+﻿  TestDataProvider.cpp
+G:\GitHub\SortingAlgorythmsComparison\SortingAlgorythmsComparison\TestDataProvider.cpp(29,19): warning C4244: "inicjowanie": konwersja z "unsigned __int64" do "unsigned int", możliwa utrata danych
+G:\GitHub\SortingAlgorythmsComparison\SortingAlgorythmsComparison\TestDataProvider.cpp(16): warning C4715: "TestDataProvider::TrySave”: niewszystkie ścieżki kodu zwracają wartość
+  SortingAlgorythmsComparison.vcxproj -> G:\GitHub\SortingAlgorythmsComparison\Debug\SortingAlgorythmsComparison.exe
