@@ -1,36 +1,37 @@
-#include <iostream>
-#include <fstream>
 #include "TestDataProvider.h"
 
-bool TestDataProvider::TrySave(std::string toFile, int* values)
+bool TestDataProvider::TrySave(std::string toFile, int* values, int valuesCount)
 {
-	int count = sizeof(&values);
 	saveFile.open(toFile);
 	if (!saveFile.good())
 	{
 		std::cout << "Could not open '" << toFile << "'" << std::endl;
 		return false;
 	}
-	std::cout << "Size : " << count << std::endl;
-
+	saveFile << valuesCount << " ";
+	for (int i = 0; i < valuesCount; i++)
+	{
+		saveFile << values[i] << " ";
+	}
+	saveFile.close();
+	return true;
 }
 
-bool TestDataProvider::TryLoad(std::string fromFile, int* values)
+int TestDataProvider::TryLoad(std::string fromFile, int** values)
 {
+	int i = 0;
 	loadFile.open(fromFile);
 	if (!loadFile.good())
 	{
 		std::cout << "Could not open '" << fromFile << "'" << std::endl;
 		return false;
 	}
-	unsigned long long i = 0;
-	unsigned long long n = 0;
-	loadFile >> n;
-	values = new int[n];
-	while (!loadFile.eof())
+	int valuesCount = 0;
+	loadFile >> valuesCount;
+	*values = new int[valuesCount];
+	for (i; i < valuesCount; i++)
 	{
-		loadFile >> values[i];
-		i++;
+		loadFile >> *values[i];
 	}
-	return true;
+	return i;
 }

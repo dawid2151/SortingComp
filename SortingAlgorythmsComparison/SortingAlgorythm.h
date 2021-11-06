@@ -2,6 +2,6 @@
 class SortingAlgorythm
 {
 public:
-	virtual bool Sort(int* intArray) = 0;
+	virtual bool Sort(int* intArray, int elementsCount) = 0;
 };
 

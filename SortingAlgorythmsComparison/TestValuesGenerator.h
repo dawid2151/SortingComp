@@ -1,5 +1,7 @@
 #pragma once
 #include <climits>
+#include <ctime>
+#include <cstdlib>
 class TestValuesGenerator
 {
 private:

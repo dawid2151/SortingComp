@@ -1,5 +1,3 @@
-#include <ctime>
-#include <cstdlib>
 #include "TestValuesGenerator.h"
 
 TestValuesGenerator::TestValuesGenerator()

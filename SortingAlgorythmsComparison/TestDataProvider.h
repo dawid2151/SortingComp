@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 #include <fstream>
 
 class TestDataProvider
@@ -9,7 +9,7 @@ private:
 	std::ifstream loadFile;
 
 public:
-	bool TrySave(std::string toFile, int* values);
-	bool TryLoad(std::string fromFile, int* values);
+	bool TrySave(std::string toFile, int* values, int valuesCount);
+	int TryLoad(std::string fromFile, int** values);
 };
 
