@@ -31,7 +31,7 @@ int TestDataProvider::TryLoad(std::string fromFile, int** values)
 	*values = new int[valuesCount];
 	for (i; i < valuesCount; i++)
 	{
-		loadFile >> *values[i];
+		loadFile >> (*values)[i];
 	}
 	return i;
 }
